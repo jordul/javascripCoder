@@ -1,0 +1,163 @@
+@import "./mixin";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#pagina {
+  @include grid(null, 0fr 5fr 0fr, "nav" "productos" "footer", null);
+  #nav {
+    @include grid(0fr 5fr 0fr, 1fr, "logo containerbuscar usercarro", "nav");
+    padding: 8px 10px 8px 10px;
+    background-color: #122b75;
+    .logo {
+      @include grid(null, null, null, "logo");
+      align-items: center;
+      a {
+        justify-items: center;
+        img {
+          width: 3em;
+          align-items: center;
+        }
+      }
+    }
+    .containerbuscar {
+      @include grid(null, null, null, "containerbuscar");
+      align-items: center;
+      justify-items: end;
+      .search{
+        @include grid(null, null, null, null);
+        width: 50%;
+        height: 70%;
+        align-items: center;
+        justify-items: center;
+        background: rgba(255,255,255,0.2);
+        border-radius: 60px;
+        margin: 0px 2% 0px 0px;
+        .inputbuttonsearch{
+          width: 80%;
+          input{
+            width: 34%;
+            position: absolute;
+            background: transparent;
+            border: 0;
+            outline: none;
+            font-size: 20px;
+            color: #cac7ff;
+          }
+          .buscar{
+            width: 10%;
+            position: relative;
+            margin: 0px 0px 0px 90%;
+            border: 0;
+            border-radius: 50%;
+            background: #58629b;
+            cursor: pointer;
+            height: 0px;
+            img{
+              width: 59%;
+            }
+          }
+        }
+        
+      }
+    }
+    #user__carrito {
+      @include grid(1fr 1fr, null, "user carro", "usercarro");
+      .user {
+        @include grid(null, null, null, "user");
+        padding: 0px 10px 0px 0px;
+        a{
+          width: 100%;
+          align-items: center;
+          img{
+            width: 2em;
+          }
+        }
+      }
+      .carro {
+        @include grid(null, null, null, "carro");
+        a{
+          width: 100%;
+          align-items: center;
+          img{
+            width: 2em;
+          }
+        }
+      }
+      figure {
+        align-items: center;
+        a {
+          justify-items: center;
+          img {
+            width: 3em;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .productos {
+    @include grid(5fr 1fr, null, "filtro card__productos", "productos");
+    padding: 7px 10px 7px 10px;
+
+      .filtro {
+        @include grid(null, null, null, "filtro");
+      }
+      .card__productos {
+        @include grid(1fr 1fr 1fr, 1fr 1fr, "card1 card2 card3" "card4 card5", "card__productos");
+        padding: 10px 20px 10px 20px;
+        div {
+            width: 100%;
+            height: auto;
+            .card {
+              width: 80%;
+              figure{
+                img{
+                    width: 40%;
+                    height: 15em
+                }
+              }
+              .productoContenido{
+                @include grid(1fr,null,"productoCardTitulo" "card__precio",null);
+                .productoCardTitulo{
+                    font-size: 1em;
+                    @include grid(null,null,null,"productoCardTitulo");
+                   padding: 7px 7px 7px 7px;
+
+                }
+                .card__precio{
+                    @include grid(null,null,null,"card__precio");
+                }
+              }
+              
+            }
+          }
+        .card1{
+            @include grid(null, null, null, "card1");
+        }
+        .card2{
+            @include grid(null, null, null, "card2");
+        }
+        .card3{
+            @include grid(null, null, null, "card3");
+        }
+        .card4{
+            @include grid(null, null, null, "card4");
+        }
+        .card5{
+            @include grid(null, null, null, "card5");
+        }
+        
+    }
+    .footer {
+      @include grid(null, null, null, "footer");
+    }
+  }
+}
+
+::placeholder{
+  color: #cac7ff;
+}

@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#pagina {
+  display: grid;
+  grid-template-rows: 0fr 5fr 0fr;
+  grid-template-areas: "nav" "productos" "footer";
+}
+#pagina #nav {
+  display: grid;
+  grid-template-columns: 0fr 5fr 0fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo containerbuscar usercarro";
+  grid-area: "nav";
+  padding: 8px 10px 8px 10px;
+  background-color: #122b75;
+}
+#pagina #nav .logo {
+  display: grid;
+  grid-area: "logo";
+  align-items: center;
+}
+#pagina #nav .logo a {
+  justify-items: center;
+}
+#pagina #nav .logo a img {
+  width: 3em;
+  align-items: center;
+}
+#pagina #nav .containerbuscar {
+  display: grid;
+  grid-area: "containerbuscar";
+  align-items: center;
+  justify-items: end;
+}
+#pagina #nav .containerbuscar .search {
+  display: grid;
+  width: 50%;
+  height: 70%;
+  align-items: center;
+  justify-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 60px;
+  margin: 0px 2% 0px 0px;
+}
+#pagina #nav .containerbuscar .search .inputbuttonsearch {
+  width: 80%;
+}
+#pagina #nav .containerbuscar .search .inputbuttonsearch input {
+  width: 34%;
+  position: absolute;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 20px;
+  color: #cac7ff;
+}
+#pagina #nav .containerbuscar .search .inputbuttonsearch .buscar {
+  width: 10%;
+  position: relative;
+  margin: 0px 0px 0px 90%;
+  border: 0;
+  border-radius: 50%;
+  background: #58629b;
+  cursor: pointer;
+  height: 0px;
+}
+#pagina #nav .containerbuscar .search .inputbuttonsearch .buscar img {
+  width: 59%;
+}
+#pagina #nav #user__carrito {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "user carro";
+  grid-area: "usercarro";
+}
+#pagina #nav #user__carrito .user {
+  display: grid;
+  grid-area: "user";
+  padding: 0px 10px 0px 0px;
+}
+#pagina #nav #user__carrito .user a {
+  width: 100%;
+  align-items: center;
+}
+#pagina #nav #user__carrito .user a img {
+  width: 2em;
+}
+#pagina #nav #user__carrito .carro {
+  display: grid;
+  grid-area: "carro";
+}
+#pagina #nav #user__carrito .carro a {
+  width: 100%;
+  align-items: center;
+}
+#pagina #nav #user__carrito .carro a img {
+  width: 2em;
+}
+#pagina #nav #user__carrito figure {
+  align-items: center;
+}
+#pagina #nav #user__carrito figure a {
+  justify-items: center;
+}
+#pagina #nav #user__carrito figure a img {
+  width: 3em;
+  align-items: center;
+}
+#pagina .productos {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas: "filtro card__productos";
+  grid-area: "productos";
+  padding: 7px 10px 7px 10px;
+}
+#pagina .productos .filtro {
+  display: grid;
+  grid-area: "filtro";
+}
+#pagina .productos .card__productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "card1 card2 card3" "card4 card5";
+  grid-area: "card__productos";
+  padding: 10px 20px 10px 20px;
+}
+#pagina .productos .card__productos div {
+  width: 100%;
+  height: auto;
+}
+#pagina .productos .card__productos div .card {
+  width: 80%;
+}
+#pagina .productos .card__productos div .card figure img {
+  width: 40%;
+  height: 15em;
+}
+#pagina .productos .card__productos div .card .productoContenido {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "productoCardTitulo" "card__precio";
+}
+#pagina .productos .card__productos div .card .productoContenido .productoCardTitulo {
+  font-size: 1em;
+  display: grid;
+  grid-area: "productoCardTitulo";
+  padding: 7px 7px 7px 7px;
+}
+#pagina .productos .card__productos div .card .productoContenido .card__precio {
+  display: grid;
+  grid-area: "card__precio";
+}
+#pagina .productos .card__productos .card1 {
+  display: grid;
+  grid-area: "card1";
+}
+#pagina .productos .card__productos .card2 {
+  display: grid;
+  grid-area: "card2";
+}
+#pagina .productos .card__productos .card3 {
+  display: grid;
+  grid-area: "card3";
+}
+#pagina .productos .card__productos .card4 {
+  display: grid;
+  grid-area: "card4";
+}
+#pagina .productos .card__productos .card5 {
+  display: grid;
+  grid-area: "card5";
+}
+#pagina .productos .footer {
+  display: grid;
+  grid-area: "footer";
+}
+
+::-moz-placeholder {
+  color: #cac7ff;
+}
+
+::placeholder {
+  color: #cac7ff;
+}/*# sourceMappingURL=style.css.map */

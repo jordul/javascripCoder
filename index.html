@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div id="pagina">
+      <nav id="nav">
+        <figure class="logo">
+          <a href="./index.html"
+            ><img src="./img/carrito-de-supermercado.png" alt="logo"
+          /></a>
+        </figure>
+        <div class="containerbuscar">
+          <form class="search" role="search">
+            <div class="inputbuttonsearch">
+              <input id="input__buscar" placeholder="Buscar" />
+              <button class="buscar" id="buscar" type="submit">
+                <img src="./img/lupa.png" alt="" />
+              </button>
+            </div>
+          </form>
+        </div>
+        <div id="user__carrito">
+          <figure class="user">
+            <a href=""><img src="./img/user.png" alt="usuario" /></a>
+          </figure>
+          <figure class="carro">
+            <a href=""
+              ><img src="./img/carrito-de-compras.png" alt="compras"
+            /></a>
+          </figure>
+        </div>
+      </nav>
+      <main class="productos">
+        <section class="card__productos" id="card"></section>
+        <section class="filtro"></section>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
