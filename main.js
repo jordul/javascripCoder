@@ -76,7 +76,7 @@ const agregar = (id) => {
 const eliminar = (id, eliminarProducto) => {
   const indice = carroCompra.findIndex((elem) => elem.id === id);
   if (carroCompra.find((elem) => elem.id === id) === undefined) {
-    console.log("El producto no lo tienes en el carrito de compras");
+    console.log("El producto no lo tiene en el carrito de compras");
   } else {
     if (carroCompra[indice].catidad != 0) {
       console.log(
