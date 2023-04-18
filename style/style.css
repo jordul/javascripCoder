@@ -113,14 +113,52 @@
 }
 #pagina .productos {
   display: grid;
-  grid-template-columns: 5fr 1fr;
-  grid-template-areas: "filtro card__productos";
+  grid-template-columns: 5fr 2fr;
+  grid-template-areas: "Card card__productos";
   grid-area: "productos";
   padding: 7px 10px 7px 10px;
 }
-#pagina .productos .filtro {
+#pagina .productos .Card {
   display: grid;
-  grid-area: "filtro";
+  grid-area: "Card";
+}
+#pagina .productos .Card .card--compra {
+  display: grid;
+  grid-template-rows: 10% 0fr 10%;
+  grid-template-areas: "titulo" "productoscompras" "total";
+  padding: 15px;
+}
+#pagina .productos .Card .card--compra .titulo {
+  display: grid;
+  grid-area: "titulo";
+  align-items: center;
+  justify-items: center;
+}
+#pagina .productos .Card .card--compra .productos--compras {
+  display: grid;
+  grid-area: "productoscompras";
+}
+#pagina .productos .Card .card--compra .total {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-area: "total";
+}
+#pagina .productos .Card .card--compra .total .total--pagar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "titulototal precio";
+  align-items: center;
+}
+#pagina .productos .Card .card--compra .total .total--pagar .titulo--total {
+  display: grid;
+  grid-area: "titulototal";
+}
+#pagina .productos .Card .card--compra .total .total--pagar .precio {
+  display: grid;
+  grid-area: "precio";
+}
+#pagina .productos .Card .card--compra .total .icon--compra {
+  width: 5%;
 }
 #pagina .productos .card__productos {
   display: grid;

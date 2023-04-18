@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #pagina {
@@ -27,18 +27,18 @@
       @include grid(null, null, null, "containerbuscar");
       align-items: center;
       justify-items: end;
-      .search{
+      .search {
         @include grid(null, null, null, null);
         width: 50%;
         height: 70%;
         align-items: center;
         justify-items: center;
-        background: rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.2);
         border-radius: 60px;
         margin: 0px 2% 0px 0px;
-        .inputbuttonsearch{
+        .inputbuttonsearch {
           width: 80%;
-          input{
+          input {
             width: 34%;
             position: absolute;
             background: transparent;
@@ -47,7 +47,7 @@
             font-size: 20px;
             color: #cac7ff;
           }
-          .buscar{
+          .buscar {
             width: 10%;
             position: relative;
             margin: 0px 0px 0px 90%;
@@ -56,12 +56,11 @@
             background: #58629b;
             cursor: pointer;
             height: 0px;
-            img{
+            img {
               width: 59%;
             }
           }
         }
-        
       }
     }
     #user__carrito {
@@ -69,20 +68,20 @@
       .user {
         @include grid(null, null, null, "user");
         padding: 0px 10px 0px 0px;
-        a{
+        a {
           width: 100%;
           align-items: center;
-          img{
+          img {
             width: 2em;
           }
         }
       }
       .carro {
         @include grid(null, null, null, "carro");
-        a{
+        a {
           width: 100%;
           align-items: center;
-          img{
+          img {
             width: 2em;
           }
         }
@@ -100,57 +99,94 @@
     }
   }
   .productos {
-    @include grid(5fr 1fr, null, "filtro card__productos", "productos");
+    @include grid(5fr 2fr, null, "Card card__productos", "productos");
     padding: 7px 10px 7px 10px;
 
-      .filtro {
-        @include grid(null, null, null, "filtro");
-      }
-      .card__productos {
-        @include grid(1fr 1fr 1fr, 1fr 1fr, "card1 card2 card3" "card4 card5", "card__productos");
-        padding: 10px 20px 10px 20px;
-        div {
-            width: 100%;
-            height: auto;
-            .card {
-              width: 80%;
-              figure{
-                img{
-                    width: 40%;
-                    height: 15em
-                }
-              }
-              .productoContenido{
-                @include grid(1fr,null,"productoCardTitulo" "card__precio",null);
-                .productoCardTitulo{
-                    font-size: 1em;
-                    @include grid(null,null,null,"productoCardTitulo");
-                   padding: 7px 7px 7px 7px;
+    .Card {
+      @include grid(null, null, null, "Card");
+      .card--compra {
+        @include grid(
+          null,
+          10% 0fr 10%,
+          "titulo" "productoscompras" "total",
+          null
+        );
+        padding: 15px;
+        .titulo {
+          @include grid(null, null, null, "titulo");
+          align-items: center;
+          justify-items: center;
+        }
+        .productos--compras {
+          @include grid(null, null, null, "productoscompras");
+        }
+        .total {
+          @include grid(null, 1fr 1fr, null, "total");
 
-                }
-                .card__precio{
-                    @include grid(null,null,null,"card__precio");
-                }
-              }
-              
+          .total--pagar {
+            @include grid(1fr 1fr, null, "titulototal precio", null);
+            align-items: center;
+            .titulo--total {
+              @include grid(null, null, null, "titulototal");
+            }
+            .precio {
+              @include grid(null, null, null, "precio");
             }
           }
-        .card1{
-            @include grid(null, null, null, "card1");
+
+          .icon--compra {
+            width: 5%;
+          }
         }
-        .card2{
-            @include grid(null, null, null, "card2");
+      }
+    }
+    .card__productos {
+      @include grid(
+        1fr 1fr 1fr,
+        1fr 1fr,
+        "card1 card2 card3" "card4 card5",
+        "card__productos"
+      );
+      padding: 10px 20px 10px 20px;
+      div {
+        width: 100%;
+        height: auto;
+        .card {
+          width: 80%;
+          figure {
+            img {
+              width: 40%;
+              height: 15em;
+            }
+          }
+          .productoContenido {
+            @include grid(1fr, null, "productoCardTitulo" "card__precio", null);
+            .productoCardTitulo {
+              font-size: 1em;
+              @include grid(null, null, null, "productoCardTitulo");
+              padding: 7px 7px 7px 7px;
+            }
+            .card__precio {
+              @include grid(null, null, null, "card__precio");
+            }
+          }
         }
-        .card3{
-            @include grid(null, null, null, "card3");
-        }
-        .card4{
-            @include grid(null, null, null, "card4");
-        }
-        .card5{
-            @include grid(null, null, null, "card5");
-        }
-        
+      }
+      .card1 {
+        @include grid(null, null, null, "card1");
+      }
+      .card2 {
+        @include grid(null, null, null, "card2");
+      }
+      .card3 {
+        @include grid(null, null, null, "card3");
+      }
+      .card4 {
+        @include grid(null, null, null, "card4");
+      }
+      .card5 {
+        @include grid(null, null, null, "card5");
+      }
     }
     .footer {
       @include grid(null, null, null, "footer");
@@ -158,6 +194,6 @@
   }
 }
 
-::placeholder{
+::placeholder {
   color: #cac7ff;
 }
