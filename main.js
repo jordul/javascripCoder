@@ -78,7 +78,7 @@ const eliminar = (id, eliminarProducto) => {
   if (carroCompra.find((elem) => elem.id === id) === undefined) {
     console.log("El producto no lo tiene en el carrito de compras");
   } else {
-    if (carroCompra[indice].catidad != 0) {
+    if (carroCompra[indice].catidad != 0 && eliminarProducto === false) {
       console.log(
         "carro con cantidad != 0 ",
         typeof parseFloat(carroCompra[indice].precio)
@@ -93,6 +93,7 @@ const eliminar = (id, eliminarProducto) => {
       };
       console.log(-product.find((elem) => elem.id === id).price);
       totalCompra(parseFloat(-product.find((elem) => elem.id === id).price));
+    } else {
       if (carroCompra[indice].catidad === 0) {
         console.log("carro con cantidad = 0");
         console.log(-carroCompra[indice].precio);
@@ -100,6 +101,7 @@ const eliminar = (id, eliminarProducto) => {
         carroCompra.splice(indice);
       } else {
         if (eliminarProducto === true) {
+          console.log(eliminarProducto === true, " eliminarProducto === true");
           if (carroCompra.length === 1) {
             Swal.fire({
               title: "Estas seguro?",
@@ -111,7 +113,11 @@ const eliminar = (id, eliminarProducto) => {
               confirmButtonText: "Yes, delete it!",
             }).then((result) => {
               if (result.isConfirmed) {
-                Swal.fire("Eliminado!", "Ahora no tienes ningun producto en el carrito", "success");
+                Swal.fire(
+                  "Eliminado!",
+                  "Ahora no tienes ningun producto en el carrito",
+                  "success"
+                );
                 console.log("eliminar producto");
                 console.log(-carroCompra[indice].precio);
                 totalCompra(-carroCompra[indice].precio);
